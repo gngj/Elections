@@ -1,17 +1,17 @@
 var getParties = function () {
 
-  var likud = new party('ליכוד', 1066669);
-  var yeshatid = new party('יש עתיד', 875959);
-  var shas = new party('שס', 319637);
-  var kachollavan = new party('המחנה הממלכתי', 455498);
+  var likud = new party('ליכוד', 1122111);
+  var yeshatid = new party('יש עתיד', 904930);
+  var shas = new party('שס', 325774);
+  var kachollavan = new party('המחנה הממלכתי', 434366);
   var yamina = new party('הבית היהודי', 0);
-  var avoda = new party('עבודה', 165307);
-  var yahadut = new party('יהדות התורה', 226601);
-  var betenu = new party('ישראל ביתנו', 204031);
-  var tziyonutdatit = new party('הציונות הדתית', 489378);
-  var meshutefet = new party('חד"ש תע"ל', 175190);
-  var meretz = new party('מרצ', 198366);
-  var aravitmeuhedet = new party('ערבית מאוחדת', 167028);
+  var avoda = new party('עבודה', 144788);
+  var yahadut = new party('יהדות התורה', 217183);
+  var betenu = new party('ישראל ביתנו', 217183);
+  var tziyonutdatit = new party('הציונות הדתית', 506760);
+  var meshutefet = new party('חד"ש תע"ל', 144788);
+  var meretz = new party('מרצ', 180986);
+  var aravitmeuhedet = new party('ערבית מאוחדת', 144788);
   var balad = new party('בל"ד', 0);
 
   var parties = [
