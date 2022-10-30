@@ -62,6 +62,25 @@ var partyConnection = (function () {
     return partyConnection;
 })();
 
+var gush = (function () {
+    function gush(_name, _parties) {
+        this.name = _name;
+        this.parties = _parties;
+        this.reset();
+    }
+    gush.prototype.totalGush = function () {
+        return this.parties.reduce(
+            (previousValue, currentValue) => previousValue + currentValue.totalMandates(),
+            0
+          );
+    };
+
+    gush.prototype.reset = function () {
+
+    };
+    return gush;
+})();
+
 var calcMandates = function (_parties, _partyConnections) {
     var totalVotes = 0;
     var blockPercent;
@@ -214,6 +233,7 @@ var calcAll = function ($scope) {
 
     $scope.parties.forEach(function (party) { party.reset(); });
     $scope.partyConnections.forEach(function (pc) { pc.reset(); });
+    $scope.gushim.forEach(function (gush) { gush.reset(); });
 
     var primaryResult = calcMandates($scope.parties, $scope.partyConnections);
     primaryResult.parties = $scope.parties;
@@ -321,6 +341,7 @@ electionsApp.controller('ElectionsCtrl', function ($scope) {
     var data = getParties();
     $scope.parties = data.parties;
     $scope.partyConnections = data.partyConnections;
+    $scope.gushim = data.gushim;
     $scope.calcResults = calcAll($scope);
 
     $scope.calcAll = function () {

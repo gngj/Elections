@@ -37,7 +37,12 @@ var getParties = function () {
     new partyConnection(avoda, meretz),
   ];
 
-  return {parties: parties, partyConnections: partyConnections};
+  var gushim =[
+    new gush("ימין", [likud, shas, yahadut, yamina, tziyonutdatit]),
+    new gush("שמאל", [yeshatid, kachollavan, meshutefet, avoda, meretz, betenu, aravitmeuhedet, balad])
+  ]
+
+  return {parties: parties, partyConnections: partyConnections, gushim: gushim};
 };
 
 var percent = 0.0325;
